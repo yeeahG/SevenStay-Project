@@ -1,0 +1,14 @@
+.footer{
+    background-color: #f7f7f7;
+    color: #999999;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.footerIcon{
+    text-align: right;
+}

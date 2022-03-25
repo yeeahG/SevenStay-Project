@@ -1,0 +1,41 @@
+.content {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    padding: 50px 50px;
+}
+
+.banner .bannerImage {
+    overflow: hidden;
+    min-width: 101%;
+    min-height: 101%;
+    border-radius: 50px;
+}
+
+.bannerText {
+    position: absolute;
+    top: 80%;
+    /*right: 60%;*/
+    left: 20%;
+    padding: 12px 24px;
+    transform: translate(10%, -50%);
+    color: white;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    right: 60%;
+    left: 10%;
+    padding: 12px 24px;
+    transform: translate(0%, -200%);
+    color: white;  */
+}
+
+.bannerText h1 {
+    font-size: 6rem;
+}
+
+.bannerText p {
+    font-size: 1.2rem;
+}

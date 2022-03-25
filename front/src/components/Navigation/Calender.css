@@ -1,0 +1,41 @@
+.B {
+    display: flex;
+    flex: 1;
+    max-width: fit-content;
+    height: 59px;
+    background-color: white;
+    overflow: hidden;
+    align-items: center;
+    padding: 0px;
+}
+
+.C {
+    padding: 9px 30px 9px 30px;
+}
+
+.C:hover {
+    background-color: #EBEBEB;
+    border-radius: 32px;
+}
+
+.naviLine {
+    align-self: center;
+    border-right: 1px solid #DDDDDD;
+    height: 32px !important;
+    flex: 0 0 0 ;
+}
+
+#dp {
+    border: none;
+    outline-width: 0;
+    border: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #717171;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.04px;
+    background-color: inherit;
+}

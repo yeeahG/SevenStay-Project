@@ -1,0 +1,70 @@
+.rowContainer {
+    margin-bottom: 50px;
+}
+
+.rowContent {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.rowContent .rowDesc {
+    display: flex;
+}
+
+.rowContent .placesRow {
+    width: 400px;
+    height: 400px;
+    margin: 0px 15px;
+    border-radius: 50px;
+}
+
+/*image hover*/
+.placesBox{
+    display:inline-block;
+    position: relative;
+}
+
+.placesBox:hover:after, .placesBox:hover > .placesText {
+  display:block;
+}
+
+.rowContent .placesText {
+    position: absolute;
+    top: 140px;
+    left: 40%;
+    color: #fff;
+    z-index: 20;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.placesBox:after, .placesText{
+    display:none;
+}
+
+.placesBox:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.3); */
+    background: rgba(245, 243, 243, 0.308);
+    z-index: 10;
+    width: 400px;
+    height: 400px;
+    margin: 0px 15px;
+    border-radius: 50px;
+}
+
+.placesBox {
+    overflow: hidden;
+}
+.placesBox img{
+    height: 340px;
+}
+.placesBox:hover img{
+       transition: 1s;
+}
