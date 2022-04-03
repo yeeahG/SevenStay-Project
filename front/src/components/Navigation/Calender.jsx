@@ -8,17 +8,13 @@ const Calender = () => {
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null)
-  // const [dateRange, setDateRange] = useState([null, null]);
-  // const [startDate, endDate] = dateRange;
-
 
   return (
+    
     <div className="B">
 
       <div className="C" id="in">
         <div className='naviCheckin'>체크인</div>
-
-
         <DatePicker
           className='datepicker1'
           id='dp'
@@ -28,9 +24,7 @@ const Calender = () => {
           startDate={startDate}
           endDate={endDate}
           dateFormat="M월 d일"
-          onChange={(date) => {
-            setStartDate(date);
-          }}
+          onChange={(date) => { setStartDate(date); }}
           selectsStart
           isClearable={true}
           placeholderText="날짜 선택"
@@ -38,8 +32,6 @@ const Calender = () => {
       </div>
 
         <div className="naviLine" />
-
-
 
       <div className="C" id="out">
         <div className='naviCheckout'>체크아웃</div>
@@ -52,34 +44,16 @@ const Calender = () => {
           startDate={startDate}
           endDate={endDate}
           dateFormat="M월 d일"
-          onChange={(date) => {
-            setEndDate(date);
-          }}
+          onChange={(date) => { setEndDate(date); }}
           selectsEnd
           isClearable={true}
           placeholderText="날짜 선택"
         />
         </div>
       </div>
-
-      
-      
+ 
     </div>
 
-
-
-    /* <div className='naviContent'>
-              <div className='naviCheckin'>체크인</div>
-              <div className="naviDate"></div>
-            </div>
-    
-    
-            <div className="naviLine" />
-    
-            <div className='naviContent'>
-            <div className='naviCheckout'>체크아웃</div>
-            <div className="naviDate"><Calender /></div>
-            </div> */
   )
 
 }

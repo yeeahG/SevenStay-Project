@@ -13,8 +13,8 @@
 }
 
 .rowContent .placesRow {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 0px 15px;
     border-radius: 50px;
 }
@@ -53,8 +53,8 @@
     /* background: rgba(0, 0, 0, 0.3); */
     background: rgba(245, 243, 243, 0.308);
     z-index: 10;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 0px 15px;
     border-radius: 50px;
 }
