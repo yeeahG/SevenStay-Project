@@ -4,8 +4,6 @@ import UserLogin from './UserLogin'
 import './LoginForm.css'
 
 const LoginForm = () => {
-  //내생각에 여기는 get method를 써서 db에서 등록된 id, pw랑 비교해서 button이 실행되게 해야할 듯
-
   //--------1버전
   // let [loginId, setLoginId] = useState("");
   // let [loginPassword, setLoginPassword] = useState("");
@@ -37,20 +35,28 @@ const LoginForm = () => {
 
   //3버전
   const adminUser = {
+    /*
     email: "admin@admin.com",
     password: "admin",
+    */
+   id: sessionStorage.getItem("signinId"),
+   password: sessionStorage.getItem("signinPassword"),
   }
-  const [user, setUser]= useState({name: "", email:""});
+  
+  console.log(sessionStorage.getItem("signinId"));
+  console.log(sessionStorage.getItem("users"));
+
+  const [user, setUser]= useState({name: "", id:""});
   const [error, setError]=useState("");
 
   const Login = details => {
     console.log(details);
 
-    if (details.email == adminUser.email && details.password == adminUser.password) {
+    if (details.id == adminUser.id && details.password == adminUser.password) {
       console.log("logged in");
       setUser({
         name: details.name,
-        email: details.email
+        id: details.id
     });
     } else {
     console.log("Details do not match");
@@ -60,7 +66,7 @@ const LoginForm = () => {
 
   const Logout = () => {
     console.log("log out");
-    setUser({name: "", email: ""});
+    setUser({name: "", id: ""});
   }
 
   return (
@@ -99,16 +105,24 @@ const LoginForm = () => {
       <input value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={submit}>로그인</button>*/}
 
-      {(user.email != "") ? (
+
+      {(user.id != "") ? (
         <div className='welcome'>
-          <h2>Welcome, <span>{user.name}</span></h2>
-          <button onClick={Logout}>Logout</button>
+          <h2>Welcome, <span>{user.id}</span></h2>
+          <button onClick={Logout}>
+            <a href="/LoginSignin/LoginForm">
+              Logout
+            </a>
+          </button>
+          <button>
+            <a href="/">Home</a>
+          </button>
         </div>
       )  : (
         <UserLogin Login={Login} error={error}/>
       )}
+ 
     </div>
-    
   )
 }
 

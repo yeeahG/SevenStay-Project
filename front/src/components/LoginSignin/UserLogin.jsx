@@ -14,14 +14,16 @@ const UserLogin = ({Login, error}) => {
     <form onSubmit={submitHandler}>
         <div className='form-inner'>
             <h2>Login</h2>
-            {(error != "") ? ( <div className='error'>error</div> ) : ""}
+            {(error != "") ? ( <div className='error'>Enter a correct ID and PASSWORD</div> ) : ""}
+            {/*
             <div className='form-gorup'>
                 <label htmlFor="name">Name : </label>
                 <input type="text" name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
             </div>
+            */}
             <div className='form-group'>
-                <label htmlFor="email">Email : </label>
-                <input type="email" name='email' id='email' onChange={e => setDetails({...details, email: e.target.value})} value={details.email}/>
+                <label htmlFor="id">Id : </label>
+                <input type="text" name='id' id='id' onChange={e => setDetails({...details, id: e.target.value})} value={details.id}/>
             </div>
             <div className='form-group'>
                 <label htmlFor="password">Password : </label>
