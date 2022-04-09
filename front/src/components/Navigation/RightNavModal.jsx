@@ -25,7 +25,9 @@ const RightNavModal = (props) => {
             <div className='line' />
             <div className='menu'>고객센터</div>
             <div className='menu'>공지사항</div>
-            <div className='menu'>설정</div>
+            <a href="../LoginSignin/UserInfo">
+              <div className='menu'>회원정보</div>
+            </a>
             <div className='line' />
           </main>
 

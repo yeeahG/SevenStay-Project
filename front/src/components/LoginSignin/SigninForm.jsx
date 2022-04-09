@@ -13,6 +13,7 @@ const SigninForm = () => {
   let [savedSigninPassword, setSavedSigninPassword] = useState("");
 
   let sessionStorage = window.sessionStorage;
+  //let lcoalStorage = window.localStorage;
 
   //다른시도
   const onSubmitSignIn = (e) => {
