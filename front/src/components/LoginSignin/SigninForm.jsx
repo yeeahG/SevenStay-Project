@@ -13,10 +13,14 @@ const SigninForm = () => {
   let [savedSigninPassword, setSavedSigninPassword] = useState("");
 
   let sessionStorage = window.sessionStorage;
-  //let lcoalStorage = window.localStorage;
+
+  //localstorage로 사용
+  let localStorage = window.localStorage;
+
 
   //다른시도
   const onSubmitSignIn = (e) => {
+    /*
     sessionStorage.setItem("phoneNumber", phoneNumber);
     sessionStorage.setItem("username", username);
     sessionStorage.setItem("signinId", signinId);
@@ -26,12 +30,28 @@ const SigninForm = () => {
     setSavedUsername(sessionStorage.getItem("username"));
     setSavedSigninId(sessionStorage.getItem("signinId"));
     setSavedSigninPassword(sessionStorage.getItem("signinPassword"));
+    */
+
+    //localstorage
+    localStorage.setItem("phoneNumber", phoneNumber);
+    localStorage.setItem("username", username);
+    localStorage.setItem("signinId", signinId);
+    localStorage.setItem("signinPassword", signinPassword);
     
+    setSavedPhoneNumber(localStorage.getItem("phoneNumber"));
+    setSavedUsername(localStorage.getItem("username"));
+    setSavedSigninId(localStorage.getItem("signinId"));
+    setSavedSigninPassword(localStorage.getItem("signinPassword"));
+    
+
     const userData = {
+      /*
       id: sessionStorage.getItem("signinId"),
       password: sessionStorage.getItem("signinPassword"),
       phone: sessionStorage.getItem("phoneNumber"),
       userName: sessionStorage.getItem("username"),
+      */
+
 
       /*
       phoneNumber: phoneNumber,
@@ -39,9 +59,16 @@ const SigninForm = () => {
       signinId: signinId,
       signinPassword: signinPassword, 
       */
+
+      id: localStorage.getItem("signinId"),
+      password: localStorage.getItem("signinPassword"),
+      phone: localStorage.getItem("phoneNumber"),
+      userName: localStorage.getItem("username"),
+
     }
 
     sessionStorage.setItem("users", JSON.stringify(userData));
+    localStorage.setItem("users", JSON.stringify(userData));
     console.log('user added');
 
     /*
@@ -57,6 +84,9 @@ const SigninForm = () => {
   console.log(sessionStorage);
   console.log(JSON.stringify(sessionStorage));
   //console.log(sessionStorage.getItem("signinId"));
+
+  console.log(localStorage);
+  console.log(JSON.stringify(localStorage));
 
   return (
     <div className='signContainer'>
@@ -77,14 +107,14 @@ const SigninForm = () => {
         회원가입
       </button>
 
-      <div>
+      {/* <div>
         <h3>USER INFO</h3>
         sessionStorage에 저장된<br/>
         loginId {savedSigninId}<br/>
         고객이름 {savedUsername}<br/>
         비밀번호 {savedSigninPassword}<br/>
         phon Number {savedPhoneNumber}<br/>
-      </div>
+      </div> */}
 
     </div>
   )

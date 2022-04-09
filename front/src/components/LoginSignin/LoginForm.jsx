@@ -39,12 +39,21 @@ const LoginForm = () => {
     email: "admin@admin.com",
     password: "admin",
     */
+   /*
    id: sessionStorage.getItem("signinId"),
    password: sessionStorage.getItem("signinPassword"),
+   */
+
+   id: localStorage.getItem("signinId"),
+   password: localStorage.getItem("signinPassword"),
   }
-  
+  /*
   console.log(sessionStorage.getItem("signinId"));
   console.log(sessionStorage.getItem("users"));
+  */
+
+  console.log(localStorage.getItem("signinId"));
+  console.log(localStorage.getItem("users"));
 
   const [user, setUser]= useState({name: "", id:""});
   const [error, setError]=useState("");
@@ -115,7 +124,9 @@ const LoginForm = () => {
             </a>
           </button>
           <button>
-            <a href="/">Home</a>
+            <a href="/">
+              Home
+            </a>
           </button>
         </div>
       )  : (

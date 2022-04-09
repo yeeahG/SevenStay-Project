@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import './Nav.css';
 import image from '../Navigation/images/7stay.png';
 import Calender from './Calender';
 import Modal from './Modal';
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
 import RightNav from './RightNav';
+import './Nav.css';
+
 
 const Nav = () => {
 

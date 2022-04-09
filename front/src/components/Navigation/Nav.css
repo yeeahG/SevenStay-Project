@@ -6,9 +6,7 @@
     text-align: center;
     border-radius: 4px;
     display: table;
-    white-space: normal;
-    background-color:  #28B463;
-    background-color:  #2C3E50  ; */
+    white-space: normal; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,7 +22,7 @@
 .navicontainer .storeTitle {
     float: left;
     font-size: 30px;
-    margin: 15px 0 15px 50px;
+    margin: 15px 40px 15px 40px;
     display: block;
     text-align: center;
     white-space: nowrap;
@@ -130,7 +128,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 11vw;
+    /*width: 10vw;*/
+    width: auto;
 }
 
 .naviLang {
