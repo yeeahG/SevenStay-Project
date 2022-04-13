@@ -6,6 +6,8 @@ const UserInfo = () => {
     console.log(localStorage.getItem("users"));
     console.log(localStorage.getItem("users.id"));
 
+    
+
   return (
     <div>
         <h3>USER INFO</h3>

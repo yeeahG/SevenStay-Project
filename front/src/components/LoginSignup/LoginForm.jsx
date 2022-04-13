@@ -1,5 +1,5 @@
 import React, { useState, useUserContext} from 'react'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import UserLogin from './UserLogin'
 import './LoginForm.css'
 
@@ -24,7 +24,7 @@ const LoginForm = () => {
   //-------2버전
   {/*const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
   
   const submit = (e) => {
     e.preventDefault();

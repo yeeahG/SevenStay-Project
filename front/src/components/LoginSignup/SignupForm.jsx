@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import './SigninForm.css'
+import { useNavigate } from 'react-router-dom';
+import './SignupForm.css'
 
-const SigninForm = () => {
+const SignupForm = () => {
   let [phoneNumber, setPhoneNumber] = useState("");
   let [username, setUsername] = useState("");
   let [signinId, setSigninId] = useState("");
@@ -17,8 +18,11 @@ const SigninForm = () => {
   //localstorage로 사용
   let localStorage = window.localStorage;
 
+  const navigate = useNavigate();
+
 
   //다른시도
+  
   const onSubmitSignIn = (e) => {
     /*
     sessionStorage.setItem("phoneNumber", phoneNumber);
@@ -45,26 +49,10 @@ const SigninForm = () => {
     
 
     const userData = {
-      /*
-      id: sessionStorage.getItem("signinId"),
-      password: sessionStorage.getItem("signinPassword"),
-      phone: sessionStorage.getItem("phoneNumber"),
-      userName: sessionStorage.getItem("username"),
-      */
-
-
-      /*
-      phoneNumber: phoneNumber,
-      username: username,
-      signinId: signinId,
-      signinPassword: signinPassword, 
-      */
-
       id: localStorage.getItem("signinId"),
       password: localStorage.getItem("signinPassword"),
       phone: localStorage.getItem("phoneNumber"),
       userName: localStorage.getItem("username"),
-
     }
 
     sessionStorage.setItem("users", JSON.stringify(userData));
@@ -79,7 +67,8 @@ const SigninForm = () => {
     console.log(userData);
 
     alert('가입이 완료되었습니다')
-    
+    //navigate.push('/')
+    window.location = "/LoginSignup/LoginForm ";
   } 
   console.log(sessionStorage);
   console.log(JSON.stringify(sessionStorage));
@@ -87,6 +76,37 @@ const SigninForm = () => {
 
   console.log(localStorage);
   console.log(JSON.stringify(localStorage));
+  
+
+
+
+  //database
+  // const onSubmitSignIn = async () => {
+  //   const item = {
+  //     phone: localStorage.getItem("phoneNumber"),
+  //     user_name: localStorage.getItem("username"), 
+  //     user_id: localStorage.getItem("signinId"),
+  //     user_password: localStorage.getItem("signinPassword")
+  //   }
+  //   console.log(item);
+
+
+  //   const result = await fetch("http://localhost:8090/signup", 
+  //   {
+  //     method:'POST', 
+  //     body:JSON.stringify(item),
+  //     headers: {
+  //       "Content-Type":'application/json',
+  //       "Accept" : 'application/json'
+  //     }
+  //   })
+  //   result = await result.json()
+  //   localStorage.setItem("user-info", JSON.stringify(result))
+  //   navigate.push("/add")
+  // }
+
+
+
 
   return (
     <div className='signContainer'>
@@ -120,4 +140,4 @@ const SigninForm = () => {
   )
 }
 
-export default SigninForm
+export default SignupForm
