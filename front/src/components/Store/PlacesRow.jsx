@@ -7,7 +7,7 @@ const PlacesRow = (props) => {
   return (
     <div className='rowContainer'>
         <div className='rowDesc'>
-            <h1>Recommand Places to stay</h1>
+            <h1 >Recommand Places to stay</h1>
         </div>
         
         <div className='rowContent'>

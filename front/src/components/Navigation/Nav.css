@@ -12,7 +12,7 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #ffa3b2;
+    background-color: #1E4174;
     z-index: 100;
     width: 100%;
     /* text-align: left; */
@@ -117,7 +117,7 @@
 
 .naviCenter .naviSearch {
     color:white;
-    background-color: #3f5ef4;
+    background-color: #DF6589;
     border-radius: 2rem;
     padding: 12px;
     height: 23px;
