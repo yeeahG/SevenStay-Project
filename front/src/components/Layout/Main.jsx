@@ -38,12 +38,18 @@ const Main = () => {
     //     />
     //     )
 
+    // const placename =  (place) => {
+    //     setPlaces(place);
+    // }
+    // console.log(places);
+    
+
 
 
   return (
     <div className='Container'>
             {/* {placeRow} */}
-            <PlacesRow/>
+            <PlacesRow />
     </div>
   )
 }

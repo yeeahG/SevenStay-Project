@@ -1,5 +1,5 @@
 .rowContainer {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .rowContent {
@@ -70,5 +70,44 @@
     height: 340px;
 }
 .placesBox:hover img{
-       transition: 1s;
+    transition: 1s;
+}
+
+/*---------------------------------footer---------------------------------*/
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.footer .box-container .box {
+    padding:1rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+ 
+ .footer .box-container .box i {
+    height: 2rem;
+    width: 2rem;
+    line-height: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--purple);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+ 
+
+.footer .box-container .box h3 {
+    margin:1rem 0;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+
+.footer .box-container .box p {
+    line-height: 2;
+    font-size: 1rem;
 }
